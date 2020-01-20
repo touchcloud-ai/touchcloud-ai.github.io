@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Play" width="90" height="90" viewBox="0 0 90 90">
+    <defs>
+        <style>
+            .cls-1{fill:#fff}.cls-2,.cls-4{fill:none}.cls-2{stroke:#fff;stroke-width:3px}.cls-3{stroke:none}
+        </style>
+    </defs>
+    <path id="Path_5" d="M33.425 20.569L0 0v41.138z" class="cls-1" data-name="Path 5" transform="translate(31.502 24.429)"/>
+    <g id="Ellipse_2" class="cls-2" data-name="Ellipse 2">
+        <circle cx="45" cy="45" r="45" class="cls-3"/>
+        <circle cx="45" cy="45" r="43.5" class="cls-4"/>
+    </g>
+</svg>
