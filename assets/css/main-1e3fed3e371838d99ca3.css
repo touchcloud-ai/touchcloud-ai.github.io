@@ -2248,7 +2248,7 @@ footer p a {
     float: left
 }
 
-@media (min-width:768px) {
+/* @media (min-width:768px) {
     .section-construction-site-safety {
         padding: 120px 18vw 0!important
     }
@@ -2326,7 +2326,7 @@ footer p a {
         font-size: 1.0rem;
         float: left;
     }
-}
+} */
 
 .page-index .section-contact {
     position: relative
