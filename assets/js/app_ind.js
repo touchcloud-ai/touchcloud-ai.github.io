@@ -7,7 +7,13 @@ const app_ind = Vue.createApp({
         }
     },
     methods: {
-        
+        toggleShowProduct(sectionId) {
+            const $navigationLinks = $(".s-header__nav li a");
+            $navigationLinks.parent().removeClass("current");
+            let $activeLink = $('.s-header__nav li a[href="#' + sectionId + '"]');
+            $activeLink.parent().addClass("current");
+            console.log("--------------------sectionID-----------",sectionId);
+        }
     },
     created() {
         
@@ -23,24 +29,26 @@ const app_ind = Vue.createApp({
         $sections.waypoint( {
             
             handler: function(direction) {
-                console.log($sections);
+
                 let $activeSection;
+
+                $activeSection = $('section#' + this.element.id);
+                
+
                 console.log("element:", this.element.id);
-                if(this.element.id.includes("solutions"))   {
-                    $activeSection = $('section#solutions');
-                }
-                else{
-                    $activeSection = $('section#' + this.element.id);
-                }
 
-                console.log("activeSection:", $activeSection);
-                //if (direction === "up") $activeSection = $activeSection.prevAll(".target-section").first();
-
+                if (direction === "up") $activeSection = $activeSection.prevAll(".target-section").first();
                 let $activeLink = $('.s-header__nav li a[href="#' + $activeSection.attr("id") + '"]');
 
                 $navigationLinks.parent().removeClass("current");
+                console.log("$navigationLinks:", $navigationLinks);
                 $activeLink.parent().addClass("current");
 
+                if(this.element.id.includes("solutions1") || this.element.id.includes("solutions2") || this.element.id.includes("solutions3") || this.element.id.includes("solutions4"))   {
+                
+                    $('.s-header__nav li a[href="#' + $('section#' + "solutions").attr("id") + '"]').parent().addClass("current");
+                
+                }
             }
         });
 
