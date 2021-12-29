@@ -199,37 +199,28 @@ html {
 
  }
 
- @media screen and (max-width: 900px) {
+
+
+@media screen and (max-width: 550px){
+    .product-content-bg {
+        flex-direction: column;
+    }
     
     .project .product-title {
-        font-size: 42px;
+        font-size: 35px;
     }
 
-    .project .product-title-left {
-        font-size: 42px;
+    .project .text-content {
+        padding:3px;
     }
 
-    .project .text-content{
-        font-size: 17px;
+    .p-video iframe{
+        width: 400px;
+        height: 300px;
+        display: block;
+        margin: auto;
     }
-
-    .p-content.product-description1 p {
-        font-size: 14px;
-    }
-    .p-content.product-description1 p.contentList {
-        font-size: 14px;
-    }
-
-    .aibox-h2 {
-        font-size: 18px;
-    }
-
-    .p-content .spacing {
-        margin-top: 6px;
-        font-size: 14px;
-    }
-
- }
+}
 
 
 /* ------------------------------------------------------------------- 
@@ -338,6 +329,7 @@ html {
     
     .pCards-size {
         width: 350px;
+        flex-direction: column;
     }
  }
 
@@ -459,3 +451,30 @@ td{
     }
  }
 
+ @media screen and (max-width: 550px) {
+    
+    .table-container  {
+        width: 100%;
+    }
+
+    .tr-head td{
+        font-size: 10px;
+    }
+    
+    td{
+        font-size:10px;
+    }
+
+    .tr-left-head {
+        font-weight:bold;
+        font-size: 10px;
+    }
+
+    .table-container table {
+        width: 76%;
+    }
+
+    .table-container table {
+        padding: 10px;
+    }
+ }
