@@ -1,89 +1,527 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-
+<html lang="en">
+  
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="mask-icon" href="assets/img/logo.svg" color="#5bbad5">
-    <meta property="og:title" content="Touch Cloud | 太奇雲端">
-    <meta property="og:description" content="Artificial Intelligence Solutions and Applications">
-    <title>太奇雲端</title>
-    <link rel="stylesheet" type="text/css" href="./assets/vendor/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" type="text/css" href="./assets/vendor/fixed-column-table/index.css">
-    <link href="assets/css/main-1e3fed3e371838d99ca3.css" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="mask-icon" href="assets/img/logo.svg" color="#5bbad5">
+  <meta property="og:title" content="Touch Cloud | 太奇雲端">
+  <meta property="og:description" content="Artificial Intelligence Solutions and Applications">
+  <title>太奇雲端</title>
+  <link rel="stylesheet" type="text/css" href="./assets/vendor/perfect-scrollbar/perfect-scrollbar.css">
+  <link rel="stylesheet" type="text/css" href="./assets/vendor/fixed-column-table/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shorthandcss@1.1.1/dist/shorthand.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Crete+Round&display=swap" rel="stylesheet">
+  <link href="assets/css/ori.css" rel="stylesheet">
+  <link href="assets/css/card.css" rel="stylesheet">
+  <link href="assets/css/navheader.css" rel="stylesheet">
+  <link href="assets/css/product_content.css" rel="stylesheet">
+  <script src="https://unpkg.com/vue@3.0.2"></script>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/css/card.css">
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
 </head>
 
-<body class="page-index"><a name="top"></a>
-    <header>
-        <nav class="transparent"><a class="logo-wrapper" href="#top"><img class="logo-in-transparent"
-                    src="assets/img/tc_logo_white-01.svg" alt="太奇雲端"> <img class="logo" src="assets/img/tc_logo.svg"
-                    alt="太奇雲端"></a>
-            <div class="links">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="#video">VIDEO</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-                <p class="copyright">© TOUCH CLOUD</p>
-            </div><button id="btn-drawer" class="btn-drawer" aria-hidden="true"><span
-                    class="hamburger"><span></span><span></span><span></span></span></button>
-        </nav>
-    </header>
-    <main style="background-color: black;">
-        <section class="section-banner"><video autoplay="autoplay" muted="true" loop="true">
-                <source src="assets/video/tc_desktop720.mp4" type="video/mp4"></video><img id="img-banner"
-                class="img-banner" alt="banner">
-            <p class="title-banner">The Cutting Edge<br>AI Solutions<br>for Smart City</p>
-            <div class="scroll-hint">
-                <div class="mouse-outer">
-                    <div class="mouse-wheel"></div>
+<body class = "page-index" id="back-top" ><a name="top"></a>
+  
+  <!-- header
+    ================================================== -->
+  <header class="s-header sticky">
+    <div class="row">
+
+      <div class="s-header__logo">
+        <a href="index.html">
+          <img src="./assets/img/tc_logo_white-01.svg" alt="Homepage">
+        </a>
+      </div>
+
+      <nav class="s-header__nav">
+        <ul>
+          <li class="current"><a class="smoothscroll" href="index.html#top">Home</a></li>
+          <li><a class="smoothscroll" href="index.html#about">About</a></li>
+          <li class="dropdown"><a class="smoothscroll" href="index.html#solutions">Industry Solutions</a>
+            <div class="dropdown-content">
+              <a href="index.html#solution-city">Smart City</a>
+              <a href="index.html#solution-retail">Smart Retail</a>
+              <a href="index.html#solution-transportation">Smart Transportation</a>
+            </div>
+          </li>
+          <li><a class="smoothscroll mobile_a" href="#back-top">Product</a></li>
+          <li><a class="smoothscroll " href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="s-header__menu-toggle" href="#0" title="Menu">
+        <span class="s-header__menu-icon"></span>
+      </a>
+
+    </div> <!-- end row -->
+  </header> <!-- end s-header -->
+
+  <main id="app"  >
+
+    <section class="section-banner" style="background-color: rgb(24 24 26);"> </section> 
+
+    <section id="back-top" class ="target-section" style="background-color: rgb(24 24 26);">
+
+      <div class="swiper swiper-container " >
+
+        <div class="swiper-wrapper" >   
+
+          <div class="swiper-slide" @click="initialProductStatus">
+            <div>
+            <div class="swiper-text">
+              <p class="eyebrow"> product</p>
+              <h1>GotchA!</h1>
+              <p class="content">Cross camera pedestrian searching and tracking. </p>
+            </div>
+            <div class="img-btn">
+              <div class="card-img gotcha" ></div>
+              <a class="swiper-href" href="#test">
+                <button class="button hover-scale-up-1 ease-200" @click.stop="toggleShowProduct(0)"> 
+                  <img class="info" src="./assets/img/info.png" alt="" style="width:40px;height:40px;"> 
+                </button>
+              </a>
+            </div>
+          </div>
+          </div>
+
+          <div class="swiper-slide" @click="initialProductStatus">
+            <div>
+              <div class="swiper-text">
+                <p class="eyebrow"> product</p>
+                <h1>AI@Sense</h1>
+                <p class="content">AI license plate recognition system.</p>
+              </div>
+              <div class="img-btn">
+                <div class="card-img aisense" ></div>
+                <a class="swiper-href" href="#test">
+                  <button class="button hover-scale-up-1 ease-200" @click.stop="toggleShowProduct(1)"> 
+                    <img class="info" src="./assets/img/info.png" alt="" style="width:40px;height:40px;"> 
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="swiper-slide" @click="initialProductStatus">
+            <div>
+              <div class="swiper-text">
+                <p class="eyebrow"> product</p>
+                <h1>Greygoose</h1>
+                <p class="content">Nx Witness VMS butilt-in plugin.</p>
+              </div>
+              <div class="img-btn">
+                <div class="card-img greygoose" ></div>
+                <a class="swiper-href" href="#test">
+                  <button class="button hover-scale-up-1 ease-200" @click.stop="toggleShowProduct(2)"> 
+                    <img class="info" src="./assets/img/info.png" alt="" style="width:40px;height:40px;"> 
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" @click="initialProductStatus">
+              <div>
+              <div class="swiper-text">
+                <p class="eyebrow"> product</p>
+                <h1>KekkAI Series</h1>
+                <p class="content">Support 12-24 channels real-time analytics. </p>
+              </div>
+              <div class="img-btn">
+                <div class="card-img kekki" ></div>
+                <a class="swiper-href" href="#test">
+                  <button class="button hover-scale-up-1 ease-200" @click.stop="toggleShowProduct(3)"> 
+                    <img class="info" src="./assets/img/info.png" alt="" style="width:40px;height:40px;"> 
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" @click="initialProductStatus">
+              <div>
+              <div class="swiper-text">
+                <p class="eyebrow"> product</p>
+                <h1>Abaci Series</h1>
+                <p class="content">Support 2-5 channels real-time counting jobs. </p>
+              </div>
+              <div class="img-btn">
+                <div class="card-img abaci" ></div>
+                <a class="swiper-href" href="#test">
+                  <button class="button hover-scale-up-1 ease-200" @click.stop="toggleShowProduct(4)"> 
+                    <img class="info" src="./assets/img/info.png" alt="" style="width:40px;height:40px;"> 
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" @click="initialProductStatus">
+              <div>
+              <div class="swiper-text">
+                <p class="eyebrow"> product</p>
+                <h1>Axis Series</h1>
+                <p class="content">An accurate virtual fence service butilt-in plugin in Axis camera.</p>
+              </div>
+              <div class="img-btn">
+                <div class="card-img axis" ></div>
+                <a class="swiper-href" href="#test">
+                  <button class="button hover-scale-up-1 ease-200" @click.stop="toggleShowProduct(5)"> 
+                    <img class="info" src="./assets/img/info.png" alt="" style="width:40px;height:40px;"> 
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" @click="initialProductStatus">
+            <div>
+              <div class="swiper-text">
+                <p class="eyebrow"> product</p>
+                <h1>AI Application Box</h1>
+                <p class="content">Our plug and play all in one product for you.  </p>
+              </div>
+              <div class="img-btn">
+                <div class="card-img application" ></div>
+                <a class="swiper-href" href="#test">
+                  <button class="button hover-scale-up-1 ease-200 " @click.stop="toggleShowProduct(6)"> 
+                    <img class="info" src="./assets/img/info.png" alt="" style="width:40px;height:40px;"> 
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> 
+        <div class="swiper-pagination"></div>
+
+      </div>
+    </section>
+
+    <div class="back-top hover-shift-t-2 ease-200"> <a href="#back-top"> <img class="herfImg" src="./assets/img/up-arrow (1).png" alt="" style="width:50px;height:50px;"> </a> </div>
+
+    <section id="back-top" class="section-banner target-section" style="background-color: rgb(24 24 26);"> </section> 
+
+    <section id="back-top" class="section-banner target-section" >
+      <div id="test"></div>  
+    </section>
+
+    <section id="back-top" class="target-section" v-if="showProduct[0].ishow">
+
+      <div  class="project">
+        <h1 class="product-title">GotchA!</h1>
+        <p class="text-content">Supports pedestrian searching and tracking in different cameras in smart city scenarios.<br>
+          You can also leverage GotchA! in smart retail scenarios, ex. shoppers’ behavior analytics.
+           </p>
+        <div class="product-content">
+          <div class="center">
+            <div class="p-video">
+              <iframe src="https://www.youtube.com/embed/SLgV-9NA-0g?autoplay=true&muted=1" title="YouTube video player" 
+                  frameborder="0" allow="accelerometer; autoplay=1; muted=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>  
+      </div>   
+
+    </section>
+
+    <section id="back-top" class="target-section" v-if="showProduct[1].ishow">
+      <div  class="project">
+        
+        <div class="product-content-bg">
+            
+          <div class="p-content product-description1" >
+            <h1 class="product-title-left">AI@Sense</h1>
+            <p >AI@Sense can be applied in different kind of situation, <br>and allow user to draw fence in system focus on specific region, make AI result more accurate.</p>
+            <div style="width:100%; height:20px;"></div>
+            <p class="contentList"> ⁃ Identify English alphabet and numbers of license plates in different scenarios 
+            <p class="contentList"> ⁃ Show the recognition results in web portal  
+            <p class="contentList"> ⁃ Send recognition results to external system by using RESTful API </p>
+          </div>
+
+          <div class="p-img">
+            <img src="./assets/img/aisense-content0.png" />
+          </div>
+
+        </div>  
+
+      </div>     
+    </section>
+      
+    <section id="back-top" class="target-section" v-if="showProduct[2].ishow">
+      <div class="project">
+
+        <div class="product-content-bg">
+            
+            <div class="p-content product-description1">
+              <h1 class="product-title-left">Greygoose</h1>
+              <p>Greygoose is a Nx Witness VMS butilt-in plugin, <br>apply an accurate analysis virtual fence service,<br> such as intrusion or abnormal event detection.</p>
+              <div style="width:100%; height:20px;"></div>
+              <p class="contentList">⁃  Virtual fence detection for flow counting and intrusion</p>
+              <p class="contentList">⁃  Real time event alert in the application</p>
+              <p class="contentList">⁃ Bookmark setup for efficiently searching</p>
+            </div>
+
+            <div class="p-img">
+              <img src="./assets/img/greygoose_content0.png" />
+            </div>
+
+        </div>  
+
+      </div>     
+    </section>
+
+    <section id="back-top" class="target-section" v-if="showProduct[3].ishow">
+      <div  class="project">
+        <h1 class="product-title">KekkAI Series</h1>
+        <p class="text-content">We offer two products of KekkAI series for different scenarios usage.  </p>
+        <div class="product-content-cards">
+
+            <div class="small-cards">
+
+            <div class="pCards-size bg-blue-lightest border-gray br-8 m-3 flex ">
+              <div class="pcards-img bg-cover br-l-8"
+                    style="background-image:url(./assets/img/kek1.jpg);">
+              </div>
+              <div class="p-5 pcards-content">
+                <h2 class="gray-darkest fs-m3 fw-600">KekkAI</h2>
+                <p class="crete-round text-header"> Virtual Fence </p>
+                <p class="text-p my-1 ">
+                  Virtually and arbitrarily defining the polygonal alert area. </p>
+                <p class="crete-round text-header"> People Intrusion Detection </p>
+                <p class="text-p my-1 ">
+                  Offering a comprehensive set of detection and alarm solutions that are easy to configure, install, and maintain. </p>
+              </div>
+            </div>
+
+            <div class="pCards-size bg-blue-lightest border-gray br-8 m-3 flex ">
+              <div class="pcards-img bg-cover br-l-8"
+                style="background-image:url(./assets/img/keki03.png);">
+              </div>
+              <div class="p-5 pcards-content">
+                <h2 class="gray-darkest fs-m3 fw-600">KekkAI-H</h2>
+                <p class="crete-round text-header"> Virtual Fence </p>
+                <p class="text-p my-1 ">
+                  Virtually and arbitrarily defining the polygonal alert area. </p>
+                <p class="crete-round text-header"> Unhelmet Worker Detection </p>
+                <p class="text-p my-1 ">
+                  Offering a comprehensive but easy to use set of detection and alarm solution to identify workers who are with or without PPE.  </p>
+              </div>
+            </div>
+
+            </div>
+
+        </div>  
+      </div>     
+    </section>
+
+    <section id="back-top" class="target-section" v-if="showProduct[4].ishow">
+      <div  class="project">
+        <h1 class="product-title">Abaci Series</h1>
+        <p class="text-content">We offer two products of Abaci series for different scenarios usage.</p>
+        <div class="product-content">
+
+            <div class="small-cards">
+
+              <div class="pCards-size bg-blue-lightest border-gray br-8 m-3 flex ">
+                <div class="pcards-img bg-cover br-l-8"
+                      style="background-image:url(./assets/img/ab01.jpg);">
                 </div>
-                <p class="hidden-phone-only">Scroll</p>
-                <p class="visible-phone-only">Swipe</p>
+                <div class="p-5 pcards-content">
+                  <h2 class="gray-darkest fs-m3 fw-600">Abaci-P</h2>
+                  <p class="crete-round text-header"> Virtual Fence </p>
+                  <p class="text-p my-1 ">
+                    Virtually and arbitrarily defining the polygonal counting area. </p>
+                  <p class="crete-round text-header"> People flow and crowd counting </p>
+                  <p class="text-p my-1 ">
+                    Using AI technology to provide valuable information and gains higher accuracy, reliability, flexibility and cost efficiency than traditional approaches.</p>
+                </div>
+              </div>
+
+              <div class="pCards-size bg-blue-lightest border-gray br-8 m-3 flex ">
+                <div class="pcards-img bg-cover br-l-8"
+                  style="background-image:url(./assets/img/abai03.jpg);">
+                </div>
+                <div class="p-5 pcards-content">
+                  <h2 class="gray-darkest fs-m3 fw-600">Abaci-V</h2>
+                  <p class="crete-round text-header"> Virtual Fence </p>
+                  <p class="text-p my-1 ">
+                    Virtually and arbitrarily defining the polygonal counting area. </p>
+                  <p class="crete-round text-header"> Vehicle Flow Counting</p>
+                  <p class="text-p my-1 ">
+                    With the capability of vehicle detection and classification, we achieve accurate vehicle flow counting and traffic law violation detection features.  </p>
+                </div>
+              </div>
+
             </div>
-        </section>
 
-        <section class="section-video"><a name="video" class="anchor-point"></a>
-            <h2 class="section-title">Touch Cloud</h2>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Prxq35J4hpE?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h2 class="section-title">VIDEO</h2>
-            <p class="text-content">
-                <iframe width="24%" height="315" src="https://www.youtube.com/embed/ohVmM1dEIZs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe width="24%" height="315" src="https://www.youtube.com/embed/QQwFT9zwZlI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe width="24%" height="315" src="https://www.youtube.com/embed/D0uGagQ_rm4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe width="24%" height="315" src="https://www.youtube.com/embed/xcD5kynXbcE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </p>
-        </section>
+        </div>  
+      </div>     
+    </section>
 
-        <section class="section-contact"><a name="contact" class="anchor-point"></a>
-            <div class="google-map" id="google-map"></div>
-            <div class="info">
-                <h2>CONTACT</h2>
-                <div class="seperator"></div>
-                <p>10F.-4, No. 148, Section 4, Zhongxiao East Road, Da’an District, Taipei City, 106</p>
-                <p><img src="assets/img/email.svg"> info@touchcloud.com.tw</p>
-                <p><img src="assets/img/phone.svg">+886 2 2778 8611</p>
-            </div>
-        </section>
-    </main>
-    <div id="loading" class="loading">
-        <div class="loader"></div>
-    </div>
-    <footer>
-        <p><a href="privacy-policy.html" target="_blank">Privacy Policy</a>|<a href="terms-of-use.html"
-                target="_blank">Terms of Use</a>|<a
-                href="https://www.facebook.com/TouchCloud-%E5%A4%AA%E5%A5%87%E9%9B%B2%E7%AB%AF-101583138263291/"
-                target="_blank"><img class="logo" src="assets/img/facebook.svg" style="height:20px;width:20px">
-                Facebook</a><br>© TOUCH CLOUD</p>
-    </footer>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBotJV-aWdoDKVTtPjCsNyYoiq1vDcK7L8"></script>
-    <script src="assets/vendor/gmaps.js"></script>
-    <script type="text/javascript" src="./assets/vendor/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="./assets/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
-    <script type="text/javascript" src="assets/js/main-1e3fed3e371838d99ca3.js"></script>
-</body>
+    <section id="back-top" class="target-section" v-if="showProduct[5].ishow">
+      <div class="project">
 
+        <div class="product-content-bg">
+          
+          <div class="p-content product-description1">
+            <h1 class="product-title-left">Axis Series</h1>
+            <p>Butilt-in plugin in Axis camera, <br>apply an accurate analysis virtual fence service, <br>such as intrusion or abnormal event detection.</p>
+            <div style="width:100%; height:20px;"></div>
+            <p class="contentList">⁃ Cameras detect the surroundings and capture footages for both monitoring and security purposes. </p>
+            <p class="contentList">⁃ Providing virtually and arbitrarily defining the polygonal alert area.</p>
+            <p class="contentList">⁃ Detect workers who are without PPE</p>
+          </div>
+
+          <div class="p-img">
+            <img src="./assets/img/worker.jpg" />
+          </div>
+
+        </div>
+
+        </div>     
+    </section>
+
+    <section id="back-top" class="ai-box target-section" v-if="showProduct[6].ishow">
+      <div  class="project">
+        <h1 class="product-title">AI Application Box</h1>
+        <p class="text-content">The total AI solution including edge box, analytics software and event portal.
+          The real plug and play solution for your use.</p>
+          <div class="product-content">
+              <div class="p-video"><video muted="true" controls autoplay loop poster="assets/img/find.jpg">
+                <source src="./assets/video/aiab720.mp4" type="video/mp4"></video>
+              </div>
+
+          </div>
+          <div class="table-content">
+          <h1 class="product-title ">System Specification</h1>  
+          <div class="table-position">
+            <div class="table-container text-center">
+              <table class="t-content">
+                <head>
+                <tr class="tr-head">
+                  <td></td>
+                  <td>KekkAI series</td>
+                  <td>Abaci series</td>
+                </tr>
+              </head>
+                <tr>
+                  <td class="tr-left-head">Functions</td>
+                  <td>People Intrusion Detection</br> Unhelmet Worker Detection</td>
+                  <td>People flow and crowd counting </br> Vehicle Flow Counting</td>
+                </tr>
+                <tr>
+                  <td class="tr-left-head">Modal</td>
+                  <td>Dell OptiPlex 3080 Micro</td>
+                  <td>Dell OptiPlex 3080 Micro</td>
+                </tr>
+                <tr>
+                  <td class="tr-left-head">CPU</td>
+                  <td>Intel Core i5-10500T</br>
+                    (6 Cores/12MB/12T/2.3GHz to 3.8GHz/35W)</td>
+                  <td>Intel Core i5-10500T</br>
+                    (6 Cores/12MB/12T/2.3GHz to 3.8GHz/35W)</td>
+                </tr>
+                <tr>
+                  <td class="tr-left-head">GPU</td>
+                  <td>Intel® UHD Graphics 630</td>
+                  <td>Intel® UHD Graphics 630</td>
+                </tr>
+                
+                <tr>
+                    <td class="tr-left-head">Dimension</td>
+                    <td>36 X 182 X 178 mm (W * L * H)</br> Weight：1.18 kg (2.6 lb)
+                      </td>
+                    <td>36 X 182 X 178 mm (W * L * H)</br> Weight：1.18 kg (2.6 lb)</td>
+                </tr>
+                <tr>
+                    <td class="tr-left-head">Memory</td>
+                    <td>8GB 1X8GB DDR4 2666MHz non-ECC</td>
+                    <td>8GB 1X8GB DDR4 2666MHz non-ECC</td>
+                </tr>
+                <tr>
+                  <td class="tr-left-head">SSD</td>
+                  <td>M.2 128GB PCIe NVMe Class 35 </td>
+                  <td>M.2 128GB PCIe NVMe Class 35 </td>
+                </tr>
+                <tr>
+                  <td class="tr-left-head"> I/O</td>
+                  <td>4x USB 3.1</br>
+                      2x USB 2.1</br>
+                      1x RJ-45</br>
+                      1x HDMI</br>
+                      1x DisplayPort 1.2</br>
+                      1 x Audio jack</br>
+                      1x Power Button</br>
+                      1x DC-in</br>
+                  </td>
+                  <td>4x USB 3.1</br>
+                    2x USB 2.1</br>
+                    1x RJ-45</br>
+                    1x HDMI</br>
+                    1x DisplayPort 1.2</br>
+                    1 x Audio jack</br>
+                    1x Power Button</br>
+                    1x DC-in</br>
+                  </td>
+                </tr>
+                <tr >
+                  <td class="tr-left-head">OS</td>
+                  <td colspan="2" >Linux,   support Intel® OpenVINOLinux, support Intel® OpenVINO</td>
+                </tr>
+                <tr>
+                  <td class="tr-left-head"> Supporting Channels</td>
+                  <td>12 - 24 channels</td>
+                  <td>2 - 5 channels</td>
+                </tr>
+
+              </table>
+          </div>
+          
+        </div>
+      </div>
+      </div>     
+    </section>
+
+    <section id="back-top" class="section-banner target-section" ></section>
+    
+  </main>
+  
+  <div id="loading" class="loading">  <div class="loader"> </div></div>
+  <footer>
+    <p><a href="privacy-policy.html" target="_blank">Privacy Policy</a>|<a href="terms-of-use.html"
+        target="_blank">Terms of Use</a>|<a
+        href="https://www.facebook.com/TouchCloud-%E5%A4%AA%E5%A5%87%E9%9B%B2%E7%AB%AF-101583138263291/"
+        target="_blank"><img class="logo" src="assets/img/facebook.svg" style="height:20px;width:20px">
+        Facebook </a>|
+        <a href="https://www.youtube.com/channel/UCc0EyMrOioOSu2suA2hz8qA/featured" target="_blank"> <img class="logo" src="assets/img/youtube.png"" style="height:20px;width:20px">
+        Youtube</a>
+        <br>© TOUCH CLOUD</p>
+        
+  </footer>
+  <script src="./assets/js/jquery-3.2.1.min.js"></script>
+  <script src="./assets/js/plugins.js"></script>
+  <script src="assets/js/ori.js"></script>
+  <script src="./assets/js/app.js"></script>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js app.js"></script>
+  <script type="text/javascript" src="./assets/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+
+
+  </body>
 </html>

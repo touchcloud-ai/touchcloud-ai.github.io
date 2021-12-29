@@ -12,72 +12,88 @@
     <link rel="stylesheet" type="text/css" href="./assets/vendor/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" type="text/css" href="./assets/vendor/fixed-column-table/index.css">
     <link href="assets/css/main-1e3fed3e371838d99ca3.css" rel="stylesheet">
+    <link href="assets/css/navheader.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3.0.2"></script>
 </head>
 
 <body class="page-index"><a name="top"></a>
-    <header>
-        <nav class="transparent"><a class="logo-wrapper" href="#top"><img class="logo-in-transparent"
-                    src="assets/img/tc_logo_white-01.svg" alt="太奇雲端"> <img class="logo" src="assets/img/tc_logo.svg"
-                    alt="太奇雲端"></a>
-            <div class="links">
-                <ul>
-                    <li><a href="#top">HOME</a></li>
-                    <li><a href="#about">ABOUTS</a></li>
-                    <li class="has-sub-menu"><a href="#solution">SOLUTIONS</a>
-                        <ul class="sub-menu">
-                            <li><a href="#solution-city">Smart City</a></li>
-                            <li><a href="#solution-ai">AI Application Box</a></li>
-                            <li><a href="#solution-aoi">AI AOI</a></li>
-                            <li><a href="#solution-construction-site">Construction Site Safety</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="video.html#video">VIDEO</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-                <p class="copyright">© TOUCH CLOUD</p>
-            </div><button id="btn-drawer" class="btn-drawer" aria-hidden="true"><span
-                    class="hamburger"><span></span><span></span><span></span></span></button>
-        </nav>
-    </header>
-    <main>
-        <section class="section-banner"><video autoplay="autoplay" muted="true" loop="true">
+    <!-- header
+    ================================================== -->
+  <header class="s-header sticky">
+    <div class="row">
+
+      <div class="s-header__logo">
+        <a href="index.html">
+          <img src="./assets/img/tc_logo_white-01.svg" alt="Homepage">
+        </a>
+      </div>
+
+      <nav class="s-header__nav">
+        <ul>
+          <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+          <li><a class="smoothscroll" href="#about">About</a></li>
+          <li class="dropdown"><a class="smoothscroll" href="#solutions">Industry Solutions</a>
+            <div class="dropdown-content">
+              <a href="#solution-city">Smart City</a>
+              <a href="#solution-retail">Smart Retail</a>
+              <a href="#solution-transportation">Smart Transportation</a>
+            </div>
+          </li>
+          <li><a class="smoothscroll mobile_a" href="video.html#video">Product</a></li>
+          <li><a class="smoothscroll " href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="s-header__menu-toggle" href="#0" title="Menu">
+          <span class="s-header__menu-icon"></span>
+      </a>
+
+    </div> <!-- end row -->
+  </header> <!-- end s-header -->
+
+    <main id="app_ind" class="ind">
+        <div style="width:100%; height:1px;"></div>
+        <section id="home" class="section-banner target-section ">
+            <video autoplay="autoplay" muted="true" loop="true">
                 <source src="assets/video/tc_desktop720.mp4" type="video/mp4"></video><img id="img-banner"
                 class="img-banner" alt="banner">
             <p class="title-banner">The Cutting Edge<br>AI Solutions<br>for Smart City</p>
             <div class="scroll-hint">
-                <div class="mouse-outer">
-                    <div class="mouse-wheel"></div>
-                </div>
-                <p class="hidden-phone-only">Scroll</p>
-                <p class="visible-phone-only">Swipe</p>
+            <div class="mouse-outer">
+                <div class="mouse-wheel"></div>
             </div>
+            <p class="hidden-phone-only">Scroll</p>
+            <p class="visible-phone-only">Swipe</p>
+            </div>
+            <div style="width:100%; height:200px;"></div>
         </section>
-        <section class="section-about"><a name="about" class="anchor-point"></a>
+
+        <section id="about" class="section-about target-section">
+
             <h2 class="section-title">ABOUT</h2>
             <h3 class="section-title2">WHO WE ARE?</h3>
-            <p class="text-content">Touch Cloud is a Taiwan startup. We are creating AI software for industry 4.0 and
-                surveillance using deep learning. We fulfill massive and high-dimensional numerical data analysis in
-                automated plants, and we also provide the solution for defect detection and classification together with
-                Automated Optical Inspection equipment.<br><br>In addition, Touch Cloud also applies deep learning
-                technology to real-time image analysis in surveillance applications. We offer end-to-end solutions from
-                cloud computing infrastructure to artificial intelligence applications for our enterprise customers.</p>
+            <p class="text-content">We are an image AI analytics product comapny.
+                We develop and offer cutting edge solutions for real-time surveillance video analytics, and apply to smart city usage. The industries we focused are transportation, manufacturing, retail, public sector and construction. 
+                Our vision is to bring excellent AI products using experience to users. All of our products are featured with plug-and-play, easy to use but high performance and high accuracy.</p>
             <h3 class="section-title2">OUR BELIEF</h3>
             <p class="text-content">At Touch Cloud, we believe that having a diverse and open minded team will help us
                 to create high value AI solutions and reach new waves of innovation. We aim to help our enterprise
                 customers to innovate with AI and believe that only with the incorporation of different viewpoints can
                 our company vision be achieved.</p>
+            <div style="width:100%; height:200px;"></div>
         </section>
+
         <div class="section-city-img"><a name="solution" class="anchor-point"></a>
-            <div id="city-img-wrapper" class="img-wrapper floating-img-wrapper w-100" floating="-2"><img
-                    src="assets/img/tpe_night@2x.jpg" floating="-1"></div>
+          <div id="city-img-wrapper" class="img-wrapper floating-img-wrapper w-100" floating="-2">
+            <img src="assets/img/tpe_night@2x.jpg" floating="-1"></div>
         </div>
 
-        <section class="section-solution-smarty-city"><a name="solution-city" class="anchor-point"></a>
-            <h2 class="section-title">SOLUTIONS</h2>
+        <section id="solutions" class="section-solution-smarty-city target-section"><a name="solution-city" class="anchor-point"></a>
+            <h2 class="section-title">INDUSTRY SOLUTIONS</h2>
             <h3 class="section-title2">Smart City</h3>
             <p class="text-content">Our cutting edge solution for real-time surveillance video analytics.<br>Provide
                 users high performance and high accuracy solutions by using deep learning technology.</p>
-            <div class="table-wrapper">
+            <div class="table-wrapper" >
                 <div class="container-table100">
                     <div class="wrap-table100">
                         <div class="table100 ver1">
@@ -155,32 +171,7 @@
                     </div>
                 </div>
             </div>
-            <div class="post post1">
-                <div class="post-img-wrapper">
-                    <div class="img-wrapper floating-img-wrapper" floating="-2"><img
-                            src="assets/img/intelligent_traffic_system@2x.jpg" floating="-1"></div>
-                </div>
-                <div class="content">
-                    <h4 class="content-title">Intelligent Traffic System</h4>
-                    <div class="seperator"></div>
-                    <h5 class="content-subtitle">Intelligent Transportation Management</h5>
-                    <div class="content-subtitle-hr"></div>
-                    <div class="content-text"><span class="prefix-check">Amount of vehicle counting</span><br><span
-                            class="prefix-check">Vehicle flow counting</span><br><span class="prefix-check">Specific
-                            behavior detection</span><br>
-                        <ul style="padding-left: 32px;list-style: disc;">
-                            <li>drive on the wrong side of the road</li>
-                            <li>traffic jam</li>
-                            <li>traffic accident</li>
-                        </ul><span class="prefix-check">Amount of pedestrian counting</span><br><span
-                            class="prefix-check">Pedestrian flow counting</span>
-                    </div>
-                    <h5 class="content-subtitle mt">Driver Behavior Analytics</h5>
-                    <div class="content-subtitle-hr"></div>
-                    <p class="content-text"><span class="prefix-check">Dangerous driving behavior
-                            detection</span><br><span class="prefix-check">Fatigue driving detection</span></p>
-                </div>
-            </div>
+            
             <div class="post post2">
                 <div class="post-img-wrapper">
                     <div class="img-wrapper floating-img-wrapper" floating="-2"><img
@@ -214,178 +205,9 @@
             </div>
         </section>
 
-        <section class="section-solution-ai-box"><a name="solution-ai" class="anchor-point"></a>
-            <h2 class="section-title">SOLUTIONS</h2>
-            <h3 class="section-title2">AI Application Box</h3>
-            <p class="text-content">The total AI solution including edge box, analytics software and event
-                portal.<br>The real plug and play solution for your use.</p>
-            <div class="intro">
-                <div class="video-wrapper"><video muted="true" poster="assets/img/video-preview-aiab.jpg">
-                        <source src="assets/video/aiab720.mp4" type="video/mp4"></video>
-                    <div id="play-mask-ai-box-intro" class="play-mask"><img src="assets/img/icon-play.svg"></div>
-                </div>
-                <div class="content">
-                    <h4 class="intro-title">Touch Cloud<br>AI Application Box</h4>
-                    <h5 class="intro-subtitle">Excellent Experience for You</h5>
-                    <div class="seperator"></div>
-                    <p class="intro-text">⁃ Easy to deploy and use<br><br>⁃ Excellent Cost / Performance ratio<br><br>⁃
-                        Provide Exactly what market needs</p>
-                </div>
-            </div>
-            <div class="post-tabbar-wrapper visible-phone-only">
-                <h4 class="tabbar-title">AI Application Box</h4>
-                <div class="tabbar"><button class="active">KekkAI series</button><button>Abaci series</button></div>
-            </div>
-            <div class="post post1 active">
-                <div class="post-content">
-                    <h4 class="post-title hidden-phone-only">AI Application Box</h4>
-                    <h5 class="post-subtitle hidden-phone-only">KekkAI series</h5>
-                    <div class="seperator hidden-phone-only"></div>
-                    <div class="post-text">Support 12~24 channels real-time<ul
-                            style="padding-left: 32px;list-style: disc;">
-                            <li>people intrusion detection</li>
-                            <li>unhelmet workers detection</li>
-                        </ul>
-                    </div>
-                    <div class="box-img-wrapper"><img src="assets/img/aiab_box_440@2x.png"></div>
-                    <p class="post-hint hidden-phone-only">1<small>/ 2</small></p>
-                </div>
-                <div class="post-img"><img src="assets/img/aiab_1.svg"></div>
-            </div>
-            <div class="post post2">
-                <div class="post-content">
-                    <h4 class="post-title hidden-phone-only">AI Application Box</h4>
-                    <h5 class="post-subtitle hidden-phone-only">Abaci series</h5>
-                    <div class="seperator hidden-phone-only"></div>
-                    <p class="post-text">Support 2~3 channels real-time people (flow) counting</p>
-                    <div class="box-img-wrapper"><img src="assets/img/aiab_box_440@2x.png"></div>
-                    <p class="post-hint hidden-phone-only">2<small>/ 2</small></p>
-                </div>
-                <div class="post-img"><img src="assets/img/aiab_2.svg"></div>
-            </div>
-        </section>
-
-        <section class="section-ai-box-spec">
-            <div id="ai-box-sepc-header" class="header-wrapper">
-                <h2 class="section-title">AI Application Box</h2>
-                <h3 class="section-title2">SYSTEM SPECIFICATION</h3>
-                <div class="seperator"></div>
-            </div>
-            <div class="spec-wrapper">
-                <ul>
-                    <li class="spec-header">
-                        <p class="spec-row-title">&nbsp;</p>
-                        <div class="box-wrapper"><img src="assets/img/aiab_box_440@2x.png">
-                            <h4 class="box-title">KekkAI series</h4>
-                        </div>
-                        <div class="box-wrapper"><img src="assets/img/aiab_box_440@2x.png">
-                            <h4 class="box-title">Abaci series</h4>
-                        </div>
-                    </li>
-                    <li class="visible-phone-only">
-                        <p class="spec-row-title">Functions</p>
-                    </li>
-                    <li class="spec-row-seperator"></li>
-                    <li class="spec-row">
-                        <p class="spec-row-title">Functions</p>
-                        <p class="spec-row-text">People intrusion detection *<br>Construction site safety **</p>
-                        <p class="spec-row-text">People (Flow) counting</p>
-                    </li>
-                    <li class="visible-phone-only">
-                        <p class="spec-row-title">Dimension</p>
-                    </li>
-                    <li class="spec-row-seperator"></li>
-                    <li class="spec-row">
-                        <p class="spec-row-title">Dimension</p>
-                        <p class="spec-row-text">115 X 115 X 49 mm (W * L * H)</p>
-                        <p class="spec-row-text">115 X 115 X 49 mm (W * L * H)</p>
-                    </li>
-                    <li class="visible-phone-only">
-                        <p class="spec-row-title">CPU</p>
-                    </li>
-                    <li class="spec-row-seperator"></li>
-                    <li class="spec-row">
-                        <p class="spec-row-title">CPU</p>
-                        <p class="spec-row-text">Intel® Core™ i Processor</p>
-                        <p class="spec-row-text">Intel® Core™ i Processor</p>
-                    </li>
-                    <li class="visible-phone-only">
-                        <p class="spec-row-title">Memory</p>
-                    </li>
-                    <li class="spec-row-seperator"></li>
-                    <li class="spec-row">
-                        <p class="spec-row-title">Memory</p>
-                        <p class="spec-row-text">8 GB DDR4 at 2400MHz 2 x SO-DIMM</p>
-                        <p class="spec-row-text">8 GB DDR4 at 2400MHz 2 x SO-DIMM</p>
-                    </li>
-                    <li class="visible-phone-only">
-                        <p class="spec-row-title">Storage</p>
-                    </li>
-                    <li class="spec-row-seperator"></li>
-                    <li class="spec-row">
-                        <p class="spec-row-title">Storage</p>
-                        <p class="spec-row-text">128GB M.2 SSD</p>
-                        <p class="spec-row-text">128GB M.2 SSD</p>
-                    </li>
-                    <li class="visible-phone-only">
-                        <p class="spec-row-title">Front I/O</p>
-                    </li>
-                    <li class="spec-row-seperator"></li>
-                    <li class="spec-row">
-                        <p class="spec-row-title">Front I/O</p>
-                        <p class="spec-row-text">1x USB 3.1 Gen 1<br>1x USB 3.1 Gen 2 Type-C<br>1 x Audio jack</p>
-                        <p class="spec-row-text">1x USB 3.1 Gen 1<br>1x USB 3.1 Gen 2 Type-C<br>1 x Audio jack</p>
-                    </li>
-                    <li class="visible-phone-only">
-                        <p class="spec-row-title">Rear I/O</p>
-                    </li>
-                    <li class="spec-row-seperator"></li>
-                    <li class="spec-row">
-                        <p class="spec-row-title">Rear I/O</p>
-                        <p class="spec-row-text">2 x USB 3.1 Gen 1<br>1x USB 3.1 Gen 1 Type-C<br>1 x HDMI<br>1 x RJ45
-                            LAN<br>1 x VGA or RJ45 LAN<br>1 x DC-in</p>
-                        <p class="spec-row-text">2 x USB 3.1 Gen 1<br>1x USB 3.1 Gen 1 Type-C<br>1 x HDMI<br>1 x RJ45
-                            LAN<br>1 x VGA or RJ45 LAN<br>1 x DC-in</p>
-                    </li>
-                    <li class="visible-phone-only">
-                        <p class="spec-row-title">OS</p>
-                    </li>
-                    <li class="spec-row-seperator"></li>
-                    <li class="spec-row">
-                        <p class="spec-row-title">OS</p>
-                        <p class="spec-row-text">Linux, support Intel® OpenVINO</p>
-                        <p class="spec-row-text">Linux, support Intel® OpenVINO</p>
-                    </li>
-                    <li class="visible-phone-only">
-                        <p class="spec-row-title">Supporting Channels</p>
-                    </li>
-                    <li class="spec-row-seperator"></li>
-                    <li class="spec-row">
-                        <p class="spec-row-title">Supporting Channels</p>
-                        <p class="spec-row-text">12 ~ 24 channels</p>
-                        <p class="spec-row-text">2 ~ 3 channels</p>
-                    </li>
-                    <li class="spec-row-seperator"></li>
-                </ul>
-                <p class="hint">* KekkAI is for people intrusion detection<br>** KekkAI-H is for construction site
-                    safety</p>
-            </div>
-        </section>
-
-        <section class="section-solution-aoi"><a name="solution-aoi" class="anchor-point"></a>
-            <h2 class="section-title">SOLUTIONS</h2>
-            <h3 class="section-title2">AI AOI</h3>
-            <p class="text-content">During the manufacturing process, defects could be introduced and harmful to the
-                quality. It is necessary to classify the defects detected by AOI machine appropriately especially killer
-                defects. The higher accuracy to classify defects, the less cost spent on review and repair
-                station.<br><br>Industry template: LCD, LED, PCBA</p><img class="img-aoi-flow hidden-phone-only"
-                src="assets/img/aoi_flow.svg">
-            <div class="div-aoi-flow-img-wrapper visible-phone-only"><img src="assets/img/aoi_flow_m.svg"></div>
-        </section>
-
-        <section class="section-construction-site-safety"><a name="solution-construction-site" class="anchor-point"></a>
-            <h2 class="section-title">SOLUTIONS</h2>
-            <h3 class="section-title2">Construction Site Safety <img src="assets/img/construct-intel-market.svg"
+        <section id="solutions1" class="section-construction-site-safety target-section"><a name="solution-construction-site" class="anchor-point"></a>
+            <h2 class="section-title">INDUSTRY SOLUTIONS</h2>
+            <h3 class="section-title2">Intel® IoT Market Ready Solutions <img src="assets/img/construct-intel-market.svg"
                     style="width: 15vw;"></h3>
             <p class="text-content"><span style="font-weight:bold;">Touch Cloud Construction Site Safety Solution</span>
                 is a computer vision surveillance solution designed to capture objects and human behaviors within a
@@ -426,46 +248,127 @@
                         </ul>
                     </div>
                 </div>
-                <div class="info-row" style="height:30%; width:100%;background-color:#003C71;">
-                    <div class="info-row-text" style="width:35%; margin-left:5%;">
-                        <ul style="color: white;">
-                            <p>&nbsp;</p>
-                            <li style="font-weight:bold;">LEARN MORE</li>
-                            <p>&nbsp;</p>
-                            <li><img src="assets/img/email.svg"> info@touchcloud.com.tw</li>
-                            <li><img src="assets/img/email.svg"> mega.tseng@wpi-group.com</li>
-                            <p>&nbsp;</p>
-                            <li>More Touch Cloud solutions at:</li>
-                            <li><a href="#top" style="color:#00AAEA;">touchcloud.com.tw/#home</a></li>
-                        </ul>
-                    </div>
-                    <div class="info-row-text" style="width:30%;">
-                        <ul>
-                            <p>&nbsp;</p>
-                            <li><img src="assets/img/intel-openvino.svg" style="width:70%;" alt="Intel-openvino"></li>
-                            <p>&nbsp;</p>
-                            <li><img src="assets/img/intel-iot.svg" style="width:70%;" alt="Intel-iot"></li>
-                        </ul>
-                    </div>
-                    <div class="info-row-text" style="width:30%;">
-                        <img src="assets/img/intel-worker.svg" alt="Intel-worker" style="height:100%; width:100%;">
-                    </div>
+            </div>
+        </section>
+
+        <section id="solutions2" class="section-solution-smarty-city target-section"> <a name="solution-retail" class="anchor-point"></a>
+            <h2 class="section-title">INDUSTRY SOLUTIONS</h2>
+            <h3 class="section-title2">Smart Retail</h3>
+            <p class="text-content">The plug-and-play solution providing accurate analytics while promoting safety for both employees and patrons.</p>
+
+            <div class="post post1">
+                <div class="post-img-wrapper">
+                    <div class="img-wrapper floating-img-wrapper" floating="-2"><img
+                            src="assets/img/retail.jpg " floating="-1"></div>
                 </div>
+                <div class="content">
+                    <h4 class="content-title">Intelligent Retail System</h4>
+                    <div class="seperator"></div>
+                    <h5 class="content-subtitle">Intelligent Retail Management</h5>
+                    <div class="content-subtitle-hr"></div>
+                    <div class="content-text"><span class="prefix-check">Amount of people counting</span><br><span
+                            class="prefix-check">People flow counting</span><br><span class="prefix-check">Specific
+                            behavior detection</span><br>
+                        <ul style="padding-left: 32px;list-style: disc;">
+                            <li>people stay period of time</li>
+                            <li>people gathering</li>
+                    </div>
+                    <h5 class="content-subtitle mt">Cross Camera Pedestrian Search</h5>
+                    <div class="content-subtitle-hr"></div>
+                    <p class="content-text">
+                      <span class="prefix-check">Search for lost elderly and children </span><br><span
+                            class="prefix-check">Footprint tracking</span>
+                </div>
+            </div>
+        </section>
 
+        <section id="solutions3" class="section-solution-smarty-city target-section"> <a name="solution-transportation" class="anchor-point"></a>
+            <h2 class="section-title">INDUSTRY SOLUTIONS</h2>
+            <h3 class="section-title2">Smart Transportation</h3>
+            <p class="text-content">Support both vehicle and people counting in public transportation settings. </p>
+
+            <div class="post post1">
+                <div class="post-img-wrapper">
+                    <div class="img-wrapper floating-img-wrapper" floating="-2"><img
+                            src="assets/img/intelligent_traffic_system@2x.jpg" floating="-1"></div>
+                </div>
+                <div class="content">
+                    <h4 class="content-title">Intelligent Traffic System</h4>
+                    <div class="seperator"></div>
+                    <h5 class="content-subtitle">Intelligent Transportation Management</h5>
+                    <div class="content-subtitle-hr"></div>
+                    <div class="content-text"><span class="prefix-check">Amount of vehicle counting</span><br><span
+                            class="prefix-check">Vehicle flow counting</span><br><span class="prefix-check">Specific
+                            behavior detection</span><br>
+                        <ul style="padding-left: 32px;list-style: disc;">
+                            <li>drive on the wrong side of the road</li>
+                            <li>traffic jam</li>
+                            <li>traffic accident</li>
+                        </ul><span class="prefix-check">Amount of pedestrian counting</span><br><span
+                            class="prefix-check">Pedestrian flow counting</span>
+                    </div>
+                    <h5 class="content-subtitle mt">Driver Behavior Analytics</h5>
+                    <div class="content-subtitle-hr"></div>
+                    <p class="content-text"><span class="prefix-check">Dangerous driving behavior
+                            detection</span><br><span class="prefix-check">Fatigue driving detection</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="solutions4" class="section-construction-site-safety target-section">
+            <h2 class="section-title">INDUSTRY SOLUTIONS</h2>
+            <h3 class="section-title2">Intel® IoT Market Ready Solutions <img src="assets/img/intel_mrs.png"
+                    style="width: 15vw;"></h3>
+            <p class="text-content"><span style="font-weight:bold;">The Touch Cloud Abaci Realtime Flow and Crowd Counting Solution</span>
+                                    counts people in retail and transportation 
+                                    settings and can be leveraged for better resource management and insight into foot traffic.
+            </p>
+            <div class="spec-wrapper">
+                <ul>
+                    <li class="spec-row">
+                        <div class="icon-wrapper"><img src="assets/img/t1.png">
+                            <h4 class="icon-title">Enhance resource management by leveraging vehicle counting 
+                                capabilities 
+                            </h4>
+                        </div>
+                        <div class="icon-wrapper"><img src="assets/img/t2.png">
+                            <h4 class="icon-title">Promote safety measures with real-time analytics that provide 
+                                insight into capacity of specific areas 
+                            </h4>
+                        </div>
+                        <div class="icon-wrapper"><img src="assets/img/tt.png">
+                            <h4 class="icon-title">Improve operational efficiencies via plug-and-play functionality that reduces setup time 
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="spec-row">
+                    <div class="spec-row-text" style="width: 80%; display: block; margin-left: 20px; margin-right: auto"><img src="assets/img/inter_abaci.png"
+                            style="width: 100%;">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div class="google-map" id="google-map"> </div>
+        
+        
+        <section id="contact" class="section-contact target-section"><a name="contact" class="anchor-point"></a>
+        
+            <div style="width:100%; height:200px;"></div>
+            <div class="info-wrap">
+                <div class="info">
+                    <h2>CONTACT</h2>
+                    <div class="seperator"></div>
+                    <p>10F.-4, No. 148, Section 4, Zhongxiao East Road, Da’an District, Taipei City, 106</p>
+                    <p><img src="assets/img/email.svg"> info@touchcloud.com.tw</p>
+                    <p><img src="assets/img/phone.svg">+886 2 2778 8611</p>
+                </div>
             </div>
 
         </section>
-
-        <section class="section-contact"><a name="contact" class="anchor-point"></a>
-            <div class="google-map" id="google-map"></div>
-            <div class="info">
-                <h2>CONTACT</h2>
-                <div class="seperator"></div>
-                <p>10F.-4, No. 148, Section 4, Zhongxiao East Road, Da’an District, Taipei City, 106</p>
-                <p><img src="assets/img/email.svg"> info@touchcloud.com.tw</p>
-                <p><img src="assets/img/phone.svg">+886 2 2778 8611</p>
-            </div>
-        </section>
+        
     </main>
     <div id="loading" class="loading">
         <div class="loader"></div>
@@ -475,15 +378,23 @@
                 target="_blank">Terms of Use</a>|<a
                 href="https://www.facebook.com/TouchCloud-%E5%A4%AA%E5%A5%87%E9%9B%B2%E7%AB%AF-101583138263291/"
                 target="_blank"><img class="logo" src="assets/img/facebook.svg" style="height:20px;width:20px">
-                Facebook</a><br>© TOUCH CLOUD</p>
+                Facebook</a>|
+                <a href="https://www.youtube.com/channel/UCc0EyMrOioOSu2suA2hz8qA/featured" target="_blank"> <img class="logo" src="assets/img/youtube.png"" style="height:20px;width:20px">
+                    Youtube</a>
+                <br>© TOUCH CLOUD</p>
     </footer>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBotJV-aWdoDKVTtPjCsNyYoiq1vDcK7L8"></script>
     <script src="assets/vendor/gmaps.js"></script>
-    <script type="text/javascript" src="./assets/vendor/jquery-3.2.1.min.js"></script>
+
+    <script src="./assets/js/jquery-3.2.1.min.js"></script>
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/app_ind.js"></script>
+
     <script type="text/javascript" src="./assets/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
     <script type="text/javascript" src="assets/js/main-1e3fed3e371838d99ca3.js"></script>
+
 </body>
 
 </html>

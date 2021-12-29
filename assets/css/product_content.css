@@ -1,0 +1,452 @@
+
+/* ------------------------------------------------------------------- 
+ * ## colors 
+ * ------------------------------------------------------------------- */
+:root {
+    /* color-1(#11abb0)
+     * color-2(#493657)
+     * color-3(#f46036)
+     */
+    --color-1: hsla(182, 82%, 38%, 1);
+    --color-2: #517495;
+    --color-gray-10: #636565;
+    --color-gray-7 : #929393;
+    --color-gray-4 : #c1c1c1;
+    --color-gray-3 : #d0d1d1;
+    --color-1-dark   : hsla(182, 82%, 30%, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ------------------------------------------------------------------- 
+ * ## project content
+ * ------------------------------------------------------------------- */
+
+.project .product-title {
+    font-size: 62px;
+    margin: 0 auto;
+    color: #00a8d6;
+    text-align: center;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.project .product-title-left {
+    font-size: 62px;
+    margin: 0 auto;
+    color: #00a8d6;
+    text-align: left;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+
+.p-content {
+    padding: 20px 10px 0;
+    text-align: left;
+}
+
+.p-content  {
+	font-size: 20px;
+    line-height: 1.23536;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    text-align: left;
+    font-family: Montserrat, PingFang TC, Heiti TC, Noto Sans, Source Han Sans, Verdana, Helvetica, Microsoft YaHei, Microsoft JhengHei, sans-serif;
+    color: var(--color-2);
+    margin-top: 0;
+    line-height: 150%;
+}
+
+.p-content .spacing {
+    margin-top: 50px;
+}
+
+.flex-content {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.p-content.product-description1 p {
+    font-size: 20px;
+    color: --color-1-dark ;
+    margin: 15px auto;
+    margin-top: 56px;
+    text-align: left;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.p-content.product-description1 p.contentList {
+    font-size: 17px;
+    color: --color-1-dark ;
+    margin: 15px auto;
+    margin-top: 10px;
+    text-align: left;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.project .text-content{
+    font-size:20px;
+    color: #8a8a8a;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.product-content{
+    display: flex;
+    padding: 82px 10vw 50px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.product-content-bg{
+    display: flex;
+    padding: 120px 10vw 50px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--color-gray-3);
+    justify-content: space-around;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.product-content-cards{
+    display: flex;
+    padding: 60px 10vw 0;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.p-video img {
+    width: 600px;
+    display: block;
+    margin: auto;
+}
+
+.p-video iframe{
+    width: 800px;
+    height: 600px;
+    display: block;
+    margin: auto;
+}
+
+
+
+.p-img img {
+    width: 600px;
+    display: flex;
+    margin: auto;
+    text-align: left;
+}
+
+.back-top {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 289;
+}
+
+.aibox-h2 {
+
+    font-family: Montserrat, PingFang TC, Heiti TC, Noto Sans, Source Han Sans, Verdana, Helvetica, Microsoft YaHei, Microsoft JhengHei, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## project content responsive
+ * ------------------------------------------------------------------- */
+ @media screen and (max-width: 900px) {
+    
+    .project .product-title {
+        font-size: 52px;
+    }
+
+    .project .product-title-left {
+        font-size: 52px;
+    }
+
+    .project .text-content{
+        font-size: 17px;
+    }
+
+    .p-content.product-description1 p {
+        font-size: 16px;
+    }
+
+    .p-content.product-description1 p.contentList {
+        font-size: 16px;
+    }
+
+    .aibox-h2 {
+        font-size: 20px;
+    }
+
+    .p-content .spacing {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+ }
+
+ @media screen and (max-width: 900px) {
+    
+    .project .product-title {
+        font-size: 42px;
+    }
+
+    .project .product-title-left {
+        font-size: 42px;
+    }
+
+    .project .text-content{
+        font-size: 17px;
+    }
+
+    .p-content.product-description1 p {
+        font-size: 14px;
+    }
+    .p-content.product-description1 p.contentList {
+        font-size: 14px;
+    }
+
+    .aibox-h2 {
+        font-size: 18px;
+    }
+
+    .p-content .spacing {
+        margin-top: 6px;
+        font-size: 14px;
+    }
+
+ }
+
+
+/* ------------------------------------------------------------------- 
+ * ## swiper images
+ * ------------------------------------------------------------------- */
+.mySwiper {
+    margin: 100px auto;
+    width: 640px;
+    height: 440px;
+}
+
+.mySwiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-content-swiper2{
+    display: flex;
+    padding: 0 10vw 0;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    transform: translateY(-40px);
+}
+
+.product-content-swiper2 .p-content{
+    transform: translateY(-110px);
+}
+
+/* ------------------------------------------------------------------- 
+ * ## product cards 
+ * ------------------------------------------------------------------- */
+
+ .small-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    min-height: 700px;
+}
+
+ .cards-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-center {
+    display: flex;
+    justify-content: center;
+}
+
+.cards-color {
+    color: #0e1416;
+}
+
+.pCards-size {
+    width: 1100px;
+    min-height: 250px;
+    box-shadow: 0px 0px 36px 1px rgba(0, 0, 0, 0.28); 
+}
+
+.pcards-img {
+    max-width: 350px;
+    width: 50%;
+    height: auto;
+    position: relative;
+    object-fit: contain;
+}
+
+.pcards-content .text-header {
+    text-align: left;
+    font-size: 18px;
+    color: #383737;
+    margin: 15px 0 5px 0;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.pcards-content .text-p {
+    text-align: left;
+    font-size: 15px;
+    color: #8a8a8a;
+    line-height: 20px;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## product cards  responsive
+ * ------------------------------------------------------------------- */
+ @media screen and (max-width: 900px) {
+    
+    .pCards-size {
+        width: 787px;
+    }
+ }
+
+ @media screen and (max-width: 780px) {
+    
+    .pCards-size {
+        width: 657px;
+    }
+ }
+
+/* ------------------------------------------------------------------- 
+ * ## table 
+ * ------------------------------------------------------------------- */
+.table-content {
+    margin-top: 50px;
+}
+.table-position {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.table-container  {
+    width: 60%;
+}
+
+.table-container table{
+    border: none;
+}
+
+table{
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0px 0px 36px 15px rgba(0, 0, 0, 0.28);  
+    border-radius: 10px;
+}
+  
+tr{
+    border: none;
+}
+
+.table-container table th, .table-container table td {
+    padding: 1rem;
+}
+
+td{
+    border: none;
+    background-color: var(--color-gray-10);
+    color: #FFF;
+    text-align: left;
+    font-size:18px;
+    line-height: 30px;
+}
+
+.tr-head td{
+    color: #00a8d6;
+    font-weight:bold;
+    font-size: 20px;
+}
+
+.tr-left-head {
+    font-weight:bold;
+    font-size: 20px;
+}
+  
+  /*第一欄第一列：左上*/
+  tr:first-child td:first-child{
+    border-top-left-radius: 10px;
+  }
+  /*第一欄最後列：左下*/
+  tr:last-child td:first-child{
+    border-bottom-left-radius: 10px;
+  }
+  /*最後欄第一列：右上*/
+  tr:first-child td:last-child{
+    border-top-right-radius: 10px;
+  }
+  /*最後欄第一列：右下*/
+  tr:last-child td:last-child{
+    border-bottom-right-radius: 10px;
+  }
+
+  tr.td_hide  td:first-child {
+    display: none;
+  }
+  
+  tr.td_hide  td:last-child {
+    width: 100%;
+  }
+
+
+  /* ------------------------------------------------------------------- 
+ * ## product cards  responsive
+ * ------------------------------------------------------------------- */
+ @media screen and (max-width: 900px) {
+    
+    .table-container  {
+        width: 69%;
+    }
+
+    .tr-head td{
+        font-size: 18px;
+    }
+    
+    .tr-left-head {
+        font-size: 16px;
+    }
+ }
+
+ @media screen and (max-width: 760px) {
+    
+    .table-container  {
+        width: 84%;
+    }
+
+    .tr-head td{
+        font-size: 12px;
+    }
+    
+    .tr-left-head {
+        font-weight:bold;
+        font-size: 12px;
+    }
+ }

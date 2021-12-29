@@ -1,0 +1,218 @@
+@charset "UTF-8";
+/*
+module
+*/
+.js-splitText {
+  display: block;
+}
+.js-st-fixed-content{
+  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  width: 40vw;
+  top: 25%;
+  overflow: visible !important;
+}
+.st-fixed-contentItem:not(:first-child){
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+/* .serviceList */
+.serviceList {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.serviceListItemWrap {
+  width: 60%;
+  padding: 0 20px;
+}
+.serviceListImagesWrap {
+  width: 40%;
+  overflow: hidden;
+}
+.serviceListImagesWrap .st-fixed-content-inner {
+  width: 100%;
+}
+.serviceListItem {
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+}
+.serviceListItem:not(.first) {
+  margin-top: 600px;
+  max-height: 150vh;
+}
+.serviceListImageSp {
+  display: none;
+}
+.serviceListContent {
+  padding-right: 110px;
+}
+.serviceListTitle {
+  font-size: 42px;
+}
+.serviceListTitle .en {
+  font-size: 50px;
+  display: inline-block;
+  position: relative;
+  top: -14.5px;
+  margin-right: 3px;
+}
+.serviceListTitle {
+  font-size: 42px;
+  margin-bottom: 70px;
+}
+.serviceListSubTitle {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  display: block;
+  color: #00a8d6;
+}
+.serviceListText {
+  font-size: 18px;
+  line-height: 1.77;
+}
+.serviceList .linkNextBlock {
+  margin-top: 50px;
+  text-align: right;
+}
+
+@media screen and (max-width: 767px) {
+  .serviceList {
+    display: block;
+  }
+  .serviceListItemWrap {
+    width: 100%;
+  }
+  .serviceListImagesWrap {
+    display: none;
+  }
+  .serviceListItem {
+    display: block;
+    margin-top: 40px;
+  }
+  .serviceListItem:not(:first-child) {
+    margin-top: 80px;
+  }
+  .serviceListItem.last {
+    padding-bottom: 0;
+  }
+  .serviceListImageSp {
+    margin-bottom: 36px;
+    display: block;
+  }
+  .serviceListContent {
+    padding-right: 0;
+  }
+  .serviceListTitle {
+    font-size: 26px;
+    margin-bottom: 30px;
+    line-height: 1.24;
+  }
+  .serviceListTitle .en {
+    font-size: 30px;
+    top: 1px;
+    margin-right: 2px;
+  }
+  .serviceListSubTitle {
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 12px;
+  }
+  .serviceListText {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  .serviceList .linkNextBlock {
+    margin-top: 20px;
+  }
+}
+
+img {
+  display: inline-block;
+  border: none;
+  max-width: 100%;
+  height: auto;
+}
+
+/* arrow */
+.arrow{
+  position: relative;
+}
+.arrow::after,
+.arrow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 11px;
+  height: 12px;
+  /* background: url(/assets/images/common/icn_arrow_01.svg) no-repeat 0 0; */
+  background-size: 11px 12px;
+}
+.arrow::after {
+  transform: translateX(-101%);
+}
+
+@media screen and (max-width: 767px) {
+  .titleMain .titleMain_en {
+    font-size: 42px;
+  }
+  .titleMain .titleMain_ja {
+    margin-top: 2px;
+    font-size: 14px;
+  }
+}
+
+/* linkNext */ /* top.cssからコピー */
+.linkNext {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding: 0 75px 0 0;
+  height: 60px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 700;
+}
+.linkNext .linkNextIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+  size: fa-6x;
+  background: #1f2022; 
+  background-size: 11px 12px;
+  transition: background-color 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+}
+
+.linkNext.linkNextEn {
+  padding: 0 80px 0 0;
+  font-size: 16px;
+}
+
+.videoSeperator {
+  margin: 30px 0;
+  width: 200px;
+  height: 1px;
+  background-color: #00a8d6;
+}
+
+.herfImg {
+  margin:0 10px;
+}
+

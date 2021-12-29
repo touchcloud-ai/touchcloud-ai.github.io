@@ -1,0 +1,210 @@
+body {
+	background: #f5f5f7;
+	font-size: 14px;
+	color: #000;
+	margin: 0;
+	padding: 0;
+    border: 0;
+    line-height: 1;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+main {
+    background-color: white;
+}
+
+.loading {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 999999999;
+}
+
+.loading .loader {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    font-size: 1rem;
+    text-indent: -12345px;
+    border: 1px solid hsla(0, 0%, 100%, .08);
+    border-left-color: hsla(0, 0%, 100%, .5);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-animation: spinner .7s linear infinite;
+    -moz-animation: spinner .7s infinite linear;
+    -ms-animation: spinner .7s infinite linear;
+    -o-animation: spinner .7s infinite linear;
+    animation: spinner .7s linear infinite;
+    z-index: 9999999999
+}
+
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block
+}
+
+ol, ul {
+    list-style: none
+}
+
+blockquote, q {
+    quotes: none
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+    content: "";
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0
+}
+
+button, select {
+    outline: none
+}
+
+html body * {
+    font-family: Montserrat, PingFang TC, Heiti TC, Noto Sans, Source Han Sans, Verdana, Helvetica, Microsoft YaHei, Microsoft JhengHei, sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+button, input[type=submit] {
+    cursor: pointer
+}
+
+.img-wrapper {
+    position: relative;
+    overflow: hidden
+}
+
+.img-wrapper.floating-img-wrapper {
+    height: 0
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: auto
+}
+
+footer {
+    width: 100%;
+    height: 90px;
+    background-color: #34495e;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+footer p {
+    font-size: 15px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: .75px;
+    text-align: center;
+    color: #fff
+}
+
+footer p a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 4px
+}
+
+
+.page-index .section-banner {
+    padding: 180px 10vw 0 180px;
+    width: 100%;
+    height: 19vh;
+    margin: 0;
+    padding: 0;
+}
+
+.page-index .section-banner .img-banner {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    display: none
+}
+
+
+.page-index .section-banner .title-banner {
+    display: none;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
+    font-size: 3.2rem;
+    font-size: 2.13vw;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    justify-content: start;
+    align-items: center;
+    padding: 100px 0 0 36px
+}
+
+@media (min-width:1px) and (max-width:767px) {
+    .page-index .section-banner .img-banner {
+        display: block
+    }
+    .page-index .section-banner video {
+        display: none
+    }
+    .page-index .section-banner .title-banner {
+        display: flex;
+        font-size: 3.2rem
+    }
+    .scroll-hint .mouse-outer {
+        border-radius: 6px
+    }
+    .scroll-hint p {
+        font-size: 1rem
+    }
+}
+
+@media (min-width:1px) and (max-width:909px) {
+    header nav .links li a{
+        font-size: 5px;
+    }
+    header nav a.logo-wrapper {
+        padding: 15px 15px
+    }
+    header nav a.logo-wrapper img {
+        width: 80%;
+        height: 80%;
+        object-fit: contain
+    }
+}
+

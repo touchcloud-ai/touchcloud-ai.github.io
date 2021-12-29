@@ -710,7 +710,7 @@
     }
 }
 
-a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -720,7 +720,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     outline: none
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, section {
     display: block
 }
 
@@ -820,305 +820,6 @@ button, input[type=submit] {
     }
 }
 
-header {
-    position: relative
-}
-
-header nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background-color: #f7f8fa;
-    z-index: 999999
-}
-
-header nav.transparent {
-    background-color: transparent
-}
-
-header nav a.logo-wrapper {
-    padding: 17px 85px;
-    display: inline-block;
-    height: 100%
-}
-
-header nav a.logo-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain
-}
-
-header nav a.logo-wrapper .logo {
-    display: block
-}
-
-header nav.transparent a.logo-wrapper .logo, header nav a.logo-wrapper .logo-in-transparent {
-    display: none
-}
-
-header nav.transparent a.logo-wrapper .logo-in-transparent {
-    display: block
-}
-
-header nav .links {
-    float: right;
-    height: 100%;
-    margin-right: 70px
-}
-
-header nav .links li {
-    height: 100%;
-    float: left
-}
-
-header nav .links li a {
-    float: right;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    line-height: 70px;
-    font-size: 1.4rem;
-    font-size: .90vw;
-    font-weight: 600;
-    color: #00a8d6;
-    padding: 0 15px;
-    text-decoration: none
-}
-
-header nav.transparent .links li a {
-    color: #fff
-}
-
-header nav .copyright, header nav .links .sub-menu {
-    display: none
-}
-
-@media (hover:hover) {
-    header nav .links li a:hover {
-        color: #fff;
-        background-color: #00a8d6
-    }
-}
-
-@media (min-width:768px) {
-    header nav.transparent {
-        height: 94.5px
-    }
-    header nav.transparent .links li a {
-        line-height: 94.5px
-    }
-    header nav .links li.has-sub-menu {
-        position: relative
-    }
-    header nav .links li.has-sub-menu.opened a {
-        color: #fff;
-        background-color: #00a8d6
-    }
-    header nav .links li.has-sub-menu .sub-menu {
-        display: block;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: calc(180px + 3vw);
-        background-color: #00a8d6;
-        max-height: 0;
-        overflow: hidden;
-        transition: all .3s
-    }
-    header nav .links li.has-sub-menu.opened .sub-menu {
-        max-height: 999px
-    }
-    header nav .links li.has-sub-menu.opened .sub-menu li {
-        width: 100%
-    }
-    header nav .links li.has-sub-menu.opened .sub-menu a {
-        width: 100%;
-        float: left
-    }
-    header nav .links li.has-sub-menu .sub-menu a:hover {
-        background-color: #34495e
-    }
-}
-
-@media (min-width:1px) and (max-width:767px) {
-    header nav {
-        height: 60px
-    }
-    header nav a.logo-wrapper {
-        padding: 15px 30px
-    }
-    header nav .links {
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        z-index: 999999;
-        transition: all .3s ease-out;
-        left: 100vw;
-        height: 100vh;
-        width: 100vw;
-        margin-right: 0;
-        background-color: #00a8d6;
-        padding: 0 36px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column
-    }
-    header nav .links ul {
-        width: 100%
-    }
-    header nav .links.opened {
-        left: 0;
-        transition: all .3s ease-out
-    }
-    header nav .links li {
-        width: 100%;
-        height: auto
-    }
-    header nav .links li.has-sub-menu {
-        height: auto
-    }
-    header nav .links li a {
-        width: 100%;
-        color: #fff;
-        text-align: left;
-        justify-content: start;
-        line-height: 1em;
-        padding: 20px 0;
-        font-size: 1.8rem;
-        font-weight: 700
-    }
-    header nav .links li:not(:last-child) {
-        border-bottom: 1px solid #e5e8ed
-    }
-    header nav .links .sub-menu {
-        display: block;
-        width: 100%
-    }
-    header nav .links .sub-menu li {
-        border-bottom: none;
-        font-size: 1.6rem;
-        font-weight: 400;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.19;
-        letter-spacing: normal;
-        text-align: left;
-        color: #fff;
-        padding: 0
-    }
-    header nav .links .sub-menu li a {
-        padding: 10px 10px 10px 20px;
-        font-size: 1.6rem;
-        font-weight: 400
-    }
-    header nav .links .sub-menu li:last-child a {
-        margin-bottom: 10px
-    }
-    header nav .copyright {
-        display: block;
-        font-size: .9rem;
-        font-weight: 400;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.22;
-        letter-spacing: .45px;
-        text-align: left;
-        color: #fff;
-        position: absolute;
-        left: 36px;
-        bottom: 50px
-    }
-}
-
-header nav .btn-drawer {
-    height: 100%;
-    line-height: 100%;
-    width: 75px;
-    float: right;
-    cursor: pointer;
-    display: none;
-    vertical-align: middle;
-    position: relative
-}
-
-header nav .btn-drawer:before {
-    content: "";
-    width: 1px;
-    height: 30px;
-    display: inline-block;
-    background-color: #dfdfdf;
-    position: absolute;
-    top: 15px;
-    left: 0
-}
-
-header nav .btn-drawer .hamburger {
-    display: inline-block;
-    width: 30px;
-    height: 16px;
-    position: relative
-}
-
-header nav .btn-drawer .hamburger span {
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: #262626;
-    border-radius: 3px;
-    -webkit-transition: all .25s ease;
-    -moz-transition: all .25s ease;
-    -ms-transition: all .25s ease;
-    -o-transition: all .25s ease;
-    transition: all .25s ease;
-    position: absolute;
-    left: 0
-}
-
-header nav.transparent .btn-drawer .hamburger span {
-    background-color: #fff
-}
-
-header nav .btn-drawer .hamburger span:first-child {
-    margin-top: 0
-}
-
-header nav .btn-drawer .hamburger span:nth-child(2) {
-    margin-top: 7px
-}
-
-header nav .btn-drawer .hamburger span:nth-child(3) {
-    margin-top: 14px
-}
-
-@media (min-width:1px) and (max-width:767px) {
-    header nav .btn-drawer {
-        display: table
-    }
-    header nav .btn-drawer.opened {
-        background-color: #fff;
-        z-index: 9999999
-    }
-    header nav .btn-drawer.opened:before {
-        display: none
-    }
-    header nav .btn-drawer.opened .hamburger span {
-        background-color: #00a8d6
-    }
-    header nav .btn-drawer.opened .hamburger span:first-child {
-        transform: rotate(45deg);
-        margin-top: 7.5px
-    }
-    header nav .btn-drawer.opened .hamburger span:nth-child(2) {
-        display: none
-    }
-    header nav .btn-drawer.opened .hamburger span:nth-child(3) {
-        transform: rotate(-45deg);
-        margin-top: 8px
-    }
-}
 
 footer {
     width: 100%;
@@ -2090,7 +1791,7 @@ footer p a {
         margin: -60px -36px 0;
         padding: 90px 36px 0;
         background-color: #fff;
-        z-index: 99
+        z-index: 2
     }
     .section-ai-box-spec .section-title {
         text-align: center!important
@@ -2329,23 +2030,27 @@ footer p a {
 } */
 
 .page-index .section-contact {
-    position: relative
+    position: relative;
+    padding-left:0;
 }
 
 .page-index .section-contact .google-map {
     width: 63%;
     height: 675px;
-    float: right;
+
     z-index: -1;
     position: relative
 }
 
 .page-index .section-contact .info {
-    width: 50%;
-    height: 440px;
+    width: 100%;
+    height: 400px;
     background-color: #00a8d6;
     padding: 60px;
-    margin-top: 117.5px
+    margin-top: 117.5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .page-index .section-contact .info a {
@@ -2397,7 +2102,7 @@ footer p a {
 @media (min-width:1px) and (max-width:767px) {
     .page-index .section-contact .google-map {
         width: 100%;
-        height: 240px;
+        height: 496px;
         position: absolute!important;
         left: 0;
         bottom: 0
@@ -2405,9 +2110,8 @@ footer p a {
     .page-index .section-contact .info {
         width: 100%;
         height: auto;
-        padding: 30px;
         margin-top: 0;
-        margin-bottom: 210px
+        padding-right: 0;
     }
     .page-index .section-contact .seperator {
         width: 38px;
@@ -2506,3 +2210,33 @@ footer p a {
         padding: 15px 30px
     }
 }
+
+
+/*---------------------------------
+    google map image
+  -------------------------------*/
+
+.google-map .imgSrc{
+    width: 100%;
+    height: 750px;
+    background: url(../img/googlemap02.png);
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width:900px) {
+    .google-map .imgSrc{
+        width:100%;
+        background: url(../img/googlemap01.png);
+    }
+}
+
+@media (max-width:767px) {
+    .google-map .imgSrc{
+        width:100%;
+        height:600px;
+        background: url(../img/googlemap01.png);
+        object-fit: contain;
+    }
+}
+
